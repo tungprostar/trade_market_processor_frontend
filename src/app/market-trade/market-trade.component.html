@@ -1,0 +1,25 @@
+<h3>EUR/GBP</h3>
+
+<div class="history-table">
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="amountSell">
+      <th mat-header-cell *matHeaderCellDef> Amount Sell </th>
+      <td mat-cell *matCellDef="let element"> {{element.amountSell}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="amountBuy">
+      <th mat-header-cell *matHeaderCellDef> Amount Buy </th>
+      <td mat-cell *matCellDef="let element"> {{element.amountBuy}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="timePlaced">
+      <th mat-header-cell *matHeaderCellDef> Time Placed </th>
+      <td mat-cell *matCellDef="let element"> {{element.timePlaced}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+<br>
+<app-trading-form></app-trading-form>

@@ -1,0 +1,17 @@
+<form [formGroup]="myForm">
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="amount sell" formControlName="amountSell" type="number" (change)="updateBuyPrice()">
+      <span matPrefix>€&nbsp;</span>
+      <span matSuffix>.00</span>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="amount buy" formControlName="amountBuy" type="number">
+      <span matPrefix>£&nbsp;</span>
+      <span matSuffix>.00</span>
+    </mat-form-field>
+  </div>
+  <button mat-raised-button (click)="submitSell()">Sell</button>
+</form>
