@@ -20,7 +20,7 @@ export class MarketTradeComponent implements OnInit {
       this.messageService.fetchTradeMessageHistory("134256").subscribe((res: any) => {
         this.dataSource = res;
       })
-    }, 3000);
+    }, 1000);
   }
 
 }
